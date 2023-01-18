@@ -1,0 +1,9 @@
+.coContainer{
+    width: 100vw;
+    min-width: 100vw;
+    height: 48px;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    font-family: "HelvelticaNeue";
+}

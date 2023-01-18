@@ -1,0 +1,57 @@
+
+
+.config-main{
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+}
+
+.config-order-form{
+    width: 60%;
+    height: 80vh;
+    background-color: #fff;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    border: 1px solid #E4E4E4;
+border-radius: 4px;
+}
+
+.config-order-select{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.config-order-select label{
+   position: relative;
+}
+.config-order-select label span{
+   position: absolute;
+   right: -20px ;
+}
+
+
+.config-order-select select{
+    width: 448px;
+    height: 44px;
+    border: 1px solid #E4E4E4;
+border-radius: 4px;
+}
+
+.form-btn{
+    border: 2px solid rgba(0,0,0,0.3);
+    margin-top: auto;
+    padding: 9px 16px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.form-btn button{
+    background-color: #66332b;
+    height: 44px;
+    width: 117px;
+}
+

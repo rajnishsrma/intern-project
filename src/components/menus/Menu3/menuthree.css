@@ -1,0 +1,20 @@
+.createorder-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #34495e;
+    height: 48px;
+    
+}
+.createorder-header span{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;   
+}
+.createorder-header a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    
+}

@@ -1,0 +1,24 @@
+
+
+
+
+.createOrderItems{
+    width: 60vw;
+    background-color: white;
+margin: 0px auto ;
+margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.createOrderItems h1{
+    font-size: 20px;
+    line-height: 26px;
+    text-align: start;
+}
+.createOrderItems h3{
+    font-size: 14px;
+    line-height: 14px;
+}
