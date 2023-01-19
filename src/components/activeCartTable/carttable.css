@@ -41,4 +41,5 @@ padding: 17px;
     position: fixed;
     right: 70px;
     bottom: 70px;
+    cursor: pointer;
 }

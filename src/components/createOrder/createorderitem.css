@@ -5,8 +5,8 @@
 .createOrderItems{
     width: 60vw;
     background-color: white;
-margin: 0px auto ;
-margin-top: 24px;
+    margin: 0px auto ;
+    margin-top: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;

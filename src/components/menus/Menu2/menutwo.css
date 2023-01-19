@@ -24,14 +24,15 @@
     margin: 0px 60px;
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
 }
 .search-box{
-    
+    cursor: pointer;
     position: relative;
 }
 
 .search-box input{
-    
+    cursor: pointer;
     background: #FFFFFF;
     width: 100px;
     height: 44px;
@@ -49,6 +50,7 @@
 
 .menu2-title a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 .menu2-title a.active{

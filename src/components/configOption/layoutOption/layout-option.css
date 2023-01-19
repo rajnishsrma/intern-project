@@ -1,0 +1,26 @@
+.layout-option-container{
+    width : 60%;
+    margin : 1rem auto ;
+    
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.layout-option-header{
+    background-color: #e4e4e4;
+    color: black;
+    text-align: left;
+}
+
+.layout-option-row{
+    margin : 12px 0 !important;
+
+}
+
+.layout-measure-size-label{
+    align-self: center;
+    text-align: left;
+}
+
+.layout-option-row Col label{
+    
+}
