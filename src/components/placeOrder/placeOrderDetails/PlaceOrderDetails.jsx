@@ -1,16 +1,20 @@
-import { faCopy, faEdit, faHeart, faMinus, faPlus, faRemove, faUser } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
-import { useState } from 'react';
+import { faCopy, faEdit, faHeart, faMinus, faPlus, faRemove, faTrash, faUser } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from 'react';
 import { FontAwesomeSvgIcon } from 'react-fontawesome-svg-icon';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { data } from '../../../CONST/CartData';
 import './placeorderdetails.css';
 
 
 export default function PlaceOrderDetails() {
 
-    const [counter, setCounter] = useState(1)
-    const [delet, setDelet] = useState(data)
+    const [counter, setCounter] = useState(1);
+    const [delet, setDelet] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        setDelet(data)
+    },[])
 
     function increment(){
        setCounter(counter +1)
@@ -22,8 +26,8 @@ export default function PlaceOrderDetails() {
     }
 
     const deletHandler = (x)=> {
-        console.log( "daf", x);
-        let filtProduct = data.filter((item, ind)=>{
+        // console.log( "daf", x);
+        let filtProduct = delet.filter((item)=>{
             if(x != item.id){
                 return true
             }else{
@@ -31,8 +35,13 @@ export default function PlaceOrderDetails() {
             }
             
         })
-
+            console.log(filtProduct.length)
         setDelet(filtProduct);
+    }
+
+    const clearCart = ()=>{
+        setDelet([])
+        navigate("/")
     }
 
   return (
@@ -44,12 +53,12 @@ export default function PlaceOrderDetails() {
                
             <div className="po-text" key={i}>
                 
-           <h1>{item.productInfo}</h1>
+                <h1>{item.productInfo}</h1>
 
-           <h3>Job Name: Front door with glass <span>Change</span></h3>
-            <h3>Product #CWD •  Garage Door</h3>
-            <h3>Availability: IN STOCK <h2>IN STOCK</h2> (Available for Pickup)</h3>
-            <span onClick = {() => {deletHandler(item.id)} }><FontAwesomeSvgIcon icon={faRemove} /></span>
+                <h3>Job Name: Front door with glass <span>Change</span></h3>
+                    <h3>Product #CWD •  Garage Door</h3>
+                    <h3>Availability: IN STOCK <h2>IN STOCK</h2> (Available for Pickup)</h3>
+                    <span onClick = {() => {deletHandler(item.id)} }><FontAwesomeSvgIcon icon={faTrash} /></span>
         </div>
         )
     })
@@ -91,8 +100,8 @@ export default function PlaceOrderDetails() {
                 <h2>COPY</h2>
             </div>
             <div className="favorites">
-                <FontAwesomeSvgIcon icon={faRemove} />
-               <Link to="/"><h2  >DELETE</h2></Link> 
+                <FontAwesomeSvgIcon icon={faTrash} />
+               <h2 onClick={clearCart} >DELETE</h2>
             </div>
         </div>
     </div>

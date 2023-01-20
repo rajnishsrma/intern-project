@@ -148,4 +148,5 @@
     display: inline-block;
     flex: 25%;
     margin-left: 20px;
+    cursor: pointer;
 }

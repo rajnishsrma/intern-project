@@ -16,10 +16,10 @@ export default function ConfigButton({billingPg, firstBtnText, secondBtnText}) {
 
         <div className="btn">
           {
-            billingPg ? <Link to="/createorder"> <button className='cart-btn' type='submit' >
+            billingPg ? <Link style={{textDecoration: "none"}} to="/createorder"> <button className='cart-btn' type='submit' >
             { billingPg && <span><FontAwesomeSvgIcon icon={faPlusSquare}/></span>} 
             {firstBtnText}  
-            </button>  </Link> :  <Link to="/configoption"> <button className='cart-btn' type='submit' >
+            </button>  </Link> :  <Link to="/configoption" style={{textDecoration: "none"}}> <button className='cart-btn' type='submit' >
             { billingPg && <span><FontAwesomeSvgIcon icon={faPlusSquare}/></span>}       
 
             {firstBtnText}
