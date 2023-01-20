@@ -1,6 +1,7 @@
-import { faPlus, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { FontAwesomeSvgIcon } from 'react-fontawesome-svg-icon';
+import { Link } from 'react-router-dom';
 import './configbutton.css';
 
 export default function ConfigButton({billingPg, firstBtnText, secondBtnText}) {
@@ -14,11 +15,28 @@ export default function ConfigButton({billingPg, firstBtnText, secondBtnText}) {
         </div>
 
         <div className="btn">
-          <button className='cart-btn' type='submit' >
-            { billingPg && <span><FontAwesomeSvgIcon icon={faPlusSquare}/></span>}
-            {firstBtnText}</button>
+          {
+            billingPg ? <Link to="/createorder"> <button className='cart-btn' type='submit' >
+            { billingPg && <span><FontAwesomeSvgIcon icon={faPlusSquare}/></span>} 
+            {firstBtnText}  
+            </button>  </Link> :  <Link to="/configoption"> <button className='cart-btn' type='submit' >
+            { billingPg && <span><FontAwesomeSvgIcon icon={faPlusSquare}/></span>}       
 
-          <button className='preview-btn' type='submit' >{secondBtnText}</button>
+            {firstBtnText}
+            </button> </Link>
+          }
+
+          {/* // <button className='cart-btn' type='submit' >
+          //   { billingPg && <span><FontAwesomeSvgIcon icon={faPlusSquare}/></span>}       
+
+          //   {firstBtnText}
+          //   </button> */}
+
+         {/* <Link  to="/">  <button className='preview-btn' type='submit' >{secondBtnText} </button></Link> */}
+
+         {
+          billingPg ? <Link  to="/configoption">  <button className='preview-btn' type='submit' >{secondBtnText} </button></Link> : <Link  to="/placeorder">  <button className='preview-btn' type='submit' >{secondBtnText} </button></Link>
+         }
         </div>
     </div>
   )

@@ -1,4 +1,40 @@
-.progress-container label{
+/* .progress-container label{
     height: 800px;
 
+} */
+
+.rogress-container{
+    width: 60%;
+    margin: 16px auto;
+    background-color: aqua;
+    margin-top: 16px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.line{
+    width: 250px;
+    height: 10px;
+    background-color: #d8d8d8;
+    margin: 16px auto;
+    position: relative;
+    border-radius: 10px;
+    /* width: 60%;
+    height: 50px;
+    margin: 16px auto;
+    background-color: blue;
+    height: 5px;
+    position: relative; */
+}
+
+.current-line{
+    width: 110px;
+    /* margin: 0px auto; */
+    background-color: #17a85f;
+    height: 10px;
+    position: absolute;
+    top: 130px;
+    left: 635px;
+    border-radius: 10px;
 }

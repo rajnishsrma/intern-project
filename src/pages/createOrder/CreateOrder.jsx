@@ -8,10 +8,12 @@ export default function CreateOrder() {
   return (
     <Container fluid className="coContainer">
         <MenuThree />
+        <div className="createOrder-container">
         <CreateOrderItem />
         <CreateOrderItem />
         <CreateOrderItem />
         <CreateOrderItem />
+        </div>
         </Container>
   )
 }

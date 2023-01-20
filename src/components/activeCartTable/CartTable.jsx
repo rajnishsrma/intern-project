@@ -6,9 +6,15 @@ import './carttable.css';
 import Table from 'react-bootstrap/Table';
 import {data} from "../../CONST/CartData"
 import MenuTwo from "../menus/Menu2/MenuTwo";
+import {Link } from "react-router-dom";
+import { useState } from "react";
 
 
 function CartTable() {
+
+  const [product, setProduct] = useState(data)
+
+
 
 
     return <Container fluid className="carttable-container">
@@ -40,7 +46,7 @@ function CartTable() {
       </tbody>
 
     </Table>
-       <div className="insertData"> <strong>+</strong> </div>
+      <Link to="/createorder"> <div className="insertData"> <strong>+</strong> </div> </Link>
     </Container>
 }
 

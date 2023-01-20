@@ -103,10 +103,10 @@
  
 }
 .company-name h2{
+    width: 200px;
     color: green;
     font-size: 16px;
     align-self: center;
-
 }
 .company-name span{
     color: #66339b;

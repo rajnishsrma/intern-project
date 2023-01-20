@@ -47,7 +47,7 @@ export default function PoBillSummary() {
                 />
             </Col>
             <Col md={12}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime architecto, debitis consequatur accusamus totam molestias veniam quas porro nemo hic!</p>
+            <p>(The 1% iStore discount is calculated into the total price for all doors and door parts. Please refer to the quote or order acknowledgment for details.)</p>
             </Col>
         </Row>
     </div>

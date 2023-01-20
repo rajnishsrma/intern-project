@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { FontAwesomeSvgIcon } from 'react-fontawesome-svg-icon';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import './configorder.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,9 +47,11 @@ export default function ConfigOrder() {
       </div>
       
      <div className="form-btn">
-     <Button  type="submit">
-        Submit
-      </Button>
+      <Link to="/configoption">
+          <Button  type="submit">
+            CONFIGURE
+          </Button>
+      </Link>
      </div>
       
     </Form>

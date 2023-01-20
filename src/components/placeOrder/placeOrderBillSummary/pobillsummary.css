@@ -11,11 +11,12 @@
 }
 
 .tax-desc{
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: grey;
 }
 
 .op-check input{

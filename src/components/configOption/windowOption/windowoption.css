@@ -17,7 +17,8 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: capitalize;
-    
+    font-weight: bold;
+    margin-top: 5px;
     color: #34495E;
 }
 .window-option-row{

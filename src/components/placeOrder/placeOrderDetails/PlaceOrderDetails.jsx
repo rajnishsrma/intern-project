@@ -1,26 +1,68 @@
 import { faCopy, faEdit, faHeart, faMinus, faPlus, faRemove, faUser } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { useState } from 'react';
 import { FontAwesomeSvgIcon } from 'react-fontawesome-svg-icon';
+import { Link } from 'react-router-dom';
+import { data } from '../../../CONST/CartData';
 import './placeorderdetails.css';
 
 
 export default function PlaceOrderDetails() {
+
+    const [counter, setCounter] = useState(1)
+    const [delet, setDelet] = useState(data)
+
+    function increment(){
+       setCounter(counter +1)
+       
+    }
+
+    function decrement(){
+        setCounter(counter -1)
+    }
+
+    const deletHandler = (x)=> {
+        console.log( "daf", x);
+        let filtProduct = data.filter((item, ind)=>{
+            if(x != item.id){
+                return true
+            }else{
+                return false
+            }
+            
+        })
+
+        setDelet(filtProduct);
+    }
+
   return (
     <div className='placeOrder-container'>
-        <div className="po-text">
-           <h1>10' 0'' X 10' 0.0'' CAN211 CC W1 COMPLETE DOOR INTELLICORE OBSCURE, 5TH GENERATION FINISH WALDER DOOR</h1>
+
+       {
+        delet.map((item, i)=>{
+            return (
+               
+            <div className="po-text" key={i}>
+                
+           <h1>{item.productInfo}</h1>
+
            <h3>Job Name: Front door with glass <span>Change</span></h3>
             <h3>Product #CWD •  Garage Door</h3>
             <h3>Availability: IN STOCK <h2>IN STOCK</h2> (Available for Pickup)</h3>
+            <span onClick = {() => {deletHandler(item.id)} }><FontAwesomeSvgIcon icon={faRemove} /></span>
         </div>
+        )
+    })
+       }
+        
 
 
         <div className="counter-prize">
             <div className='pod-counter'>
 
-                <button className='dec'><FontAwesomeSvgIcon icon={faMinus} /></button>
-                <span className='num'>1</span>
-                <button className='inc'><FontAwesomeSvgIcon icon={faPlus} /></button>
+                <button className='dec' onClick={decrement}><FontAwesomeSvgIcon icon={faMinus} /></button>
+                <span className='num'>{counter}</span>
+                <button className='inc' onClick={increment}><FontAwesomeSvgIcon icon={faPlus} /></button>
                 
             </div>
             <div className="company-name">
@@ -42,7 +84,7 @@ export default function PlaceOrderDetails() {
             </div>
             <div className="favorites">
                 <FontAwesomeSvgIcon icon={faEdit} />
-                <h2>EDIT</h2>
+              <Link to="/configoption"><h2>EDIT</h2></Link>  
             </div>
             <div className="favorites">
                 <FontAwesomeSvgIcon icon={faCopy} />
@@ -50,7 +92,7 @@ export default function PlaceOrderDetails() {
             </div>
             <div className="favorites">
                 <FontAwesomeSvgIcon icon={faRemove} />
-                <h2>DELETE</h2>
+               <Link to="/"><h2  >DELETE</h2></Link> 
             </div>
         </div>
     </div>

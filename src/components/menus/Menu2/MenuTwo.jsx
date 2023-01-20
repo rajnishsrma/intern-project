@@ -2,13 +2,14 @@ import { faFilter, faSearch } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { FontAwesomeSvgIcon } from "react-fontawesome-svg-icon";
+import { NavLink } from "react-router-dom";
 import './menutwo.css';
 
 function MenuTwo(){
     return <Container fluid className="menu2-container">
         <div className="menu2-title">
-            <a className="active">Active Carts</a>
-            <a>Archived Carts</a>
+            <NavLink to="/">Active Carts</NavLink>
+            <NavLink to="/archive">Archived Carts</NavLink>
         </div>
 
         <div className="menu2-input">
